@@ -131,14 +131,12 @@ function Card() {
             >
               All
             </ListItem>
-
             <ListItem
               $active={filter === "active"}
               onClick={() => setFilter("active")}
             >
               Active
             </ListItem>
-
             <ListItem
               $active={filter === "completed"}
               onClick={() => setFilter("completed")}
