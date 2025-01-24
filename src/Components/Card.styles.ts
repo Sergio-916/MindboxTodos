@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 export const Header = styled.h1`
-  font-size: 2rem;
+  font-size: 4rem;
   color: #E9D9D8;
   text-align: center;
   font-family: "Nunito Sans", sans-serif;
-  font-weight: bold;
-  padding: 20px 0;
-
+  font-weight: 200;
+  padding: 15px 0;
+  margin: 0;
   @media (max-width: 768px) {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 
   @media (max-width: 480px) {
-    font-size: 1.5rem;
-    padding: 15px 0;
+    font-size: 2rem;
+    padding: 5px 0;
   }
 `;
 
@@ -36,7 +36,7 @@ export const InputWrapper = styled.div`
 
 export const Input = styled.input`
   width: 100%;
-  padding: 20px 20px 12px 60px;  /* Учитываем место для стрелки */
+  padding: 20px 20px 12px 60px;  
   margin: 8px 0;
   height: 30px;
   display: inline-block;
@@ -48,13 +48,12 @@ export const Input = styled.input`
   border: none;
   outline: none;
 
-  /* Выравнивание текста */
   line-height: 1.5;
   vertical-align: middle;
    &::placeholder {
-    color: #ccc;  /* Задаем цвет */
-    font-style: normal;  /* Можно убрать курсив */
-    opacity: 1;  /* Устанавливаем полную непрозрачность */
+    color: #ccc;  
+    font-style: normal;  
+    opacity: 1;  
   }
 `;
 
@@ -93,23 +92,23 @@ export const PageStack = styled.div<{index: number}>`
 
 export const TodoContainer = styled.div`
   background-color: #fff;
-  max-width: 100%; /* Ограничение ширины */
+  max-width: 100%;
   width: 600px;
   height: auto;
   // border-top: 1px solid #E9E9E9;
   // border-left: 1px solid #E9E9E9;
   // border-right: 1px solid #E9E9E9;
    box-shadow: 
-    -2px 2px 4px rgba(0, 0, 0, 0.05),  /* Слева */
-     2px 2px 4px rgba(0, 0, 0, 0.05),  /* Справа */
+    -2px 2px 4px rgba(0, 0, 0, 0.05), 
+     2px 2px 4px rgba(0, 0, 0, 0.05),  
      2px 0 4px rgba(0, 0, 0, 0.05);    
 
      
     
    
   box-sizing: border-box;
-  overflow: hidden; /* Предотвращает выход контента */
-  margin: 0 auto; /* Центрирование */
+  overflow: hidden; 
+  margin: 0 auto; 
 
   @media (max-width: 768px) {
     width: 90%;
@@ -124,7 +123,7 @@ export const TodoContainer = styled.div`
 export const Page = styled.div<{ index: number; total: number }>`
   position: absolute;
   width: ${({ index, total }) => `calc(100% - ${index * (50 / total)}px)`};
-  max-width: 600px;  /* Ограничение максимальной ширины */
+  max-width: 600px; 
   height: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(${({ index }) => index * 5}px);
@@ -138,9 +137,9 @@ export const Page = styled.div<{ index: number; total: number }>`
   z-index: ${({ total, index }) => total - index};
   box-sizing: border-box;
     box-shadow: 
-    -2px 2px 4px rgba(0, 0, 0, 0.05),  /* Слева */
-     2px 2px 4px rgba(0, 0, 0, 0.05),  /* Справа */
-     0 2px 4px rgba(0, 0, 0, 0.05);     /* Снизу */
+    -2px 2px 4px rgba(0, 0, 0, 0.05),  
+     2px 2px 4px rgba(0, 0, 0, 0.05), 
+     0 2px 4px rgba(0, 0, 0, 0.05);   
     
 
 
@@ -155,15 +154,13 @@ export const Page = styled.div<{ index: number; total: number }>`
   }
 `;
 
-
-
 export const BottomBar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
   font-family: "Nunito Sans", sans-serif;
-  flex-wrap: wrap; /* Элементы переходят на новую строку при нехватке места */
+  flex-wrap: wrap;
   color: #C2C2C2;
 
   @media (max-width: 480px) {
@@ -189,12 +186,12 @@ export const ActionsList = styled.ul`
 export const ListItem = styled.li<{ $active: boolean }>`
   padding: 3px 7px;
   cursor: pointer;
-  border: 1px solid transparent; /* Прозрачная рамка по умолчанию */
+  border: 1px solid transparent; 
 
   ${({ $active }) =>
     $active &&
     `
-    border-color: #F0E0E0; /* Цвет рамки при выборе */
+    border-color: #F0E0E0;
     border-radius: 5px;
   `}
 `;
@@ -238,6 +235,6 @@ export const TodoListContainer = styled.div`
 
 export const Divider = styled.hr`
   border-top: 1px solid #E9E9E9;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   margin: 15px 0;
 `;

@@ -8,7 +8,7 @@ const Container = styled.div`
   padding: 0 20px; /* Внутренние отступы */
   width: 100%; /* Заполнение доступного пространства */
   background-color: #f2f2f2;
-  padding: 20px;    
+  padding-bottom: 20px;    
 `;
 
 function App() {
